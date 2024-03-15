@@ -4,6 +4,7 @@
 Read or watch:
 
 Python 3 typing documentation <br>https://docs.python.org/3/library/typing.html<br>
+
 MyPy cheat sheet <br>https://mypy.readthedocs.io/en/latest/cheat_sheet_py3.html<br>
 
 ## General
