@@ -2,15 +2,15 @@
 """ This function retrieves a value associated with
 a specified key from a dictionary."""
 
-from typing import Mapping, Any, TypeVar, Optional
-V = TypeVar('V')
+from typing import Mapping, Any, TypeVar, Union
+T = TypeVar('T')
 
 
 def safely_get_value(
-    dct: Mapping[Any, V],
+    dct: Mapping,
     key: Any,
-    default: Optional[V] = None
-) -> V:
+    default: Union[T, None]= None
+    ) -> Union[Any, T]:
     """ This function retrieves a value associated with
     a specified key from a dictionary."""
 
