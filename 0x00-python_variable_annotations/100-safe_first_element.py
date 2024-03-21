@@ -2,10 +2,10 @@
 """
     Return the first element of an iterable, or None if the iterable is empty.
 """
-from typing import Iterable, Any, Union
+from typing import Iterable, Any, Union, Sequence
 
 
-def safe_first_element(lst: Iterable[Any]) -> Union[Any, None]:
+def safe_first_element(lst: Sequence[Any]) -> Union[Any, None]:
     """
     Return the first element of an iterable, or None if the iterable is empty.
 
