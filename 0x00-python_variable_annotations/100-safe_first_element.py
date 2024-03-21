@@ -1,4 +1,4 @@
-#!/usr/bin/env python3i
+#!/usr/bin/env python3
 """
     Return the first element of an iterable, or None if the iterable is empty.
 """
