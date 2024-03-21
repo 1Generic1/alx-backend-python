@@ -13,7 +13,8 @@ def safe_first_element(lst: Sequence[Any]) -> Union[Any, None]:
         lst (Iterable[Any]): The input iterable.
 
     Returns:
-        Union[Any, None]: The first element of the iterable, or None if the iterable is empty.
+        Union[Any, None]: The first element of the iterable,
+        or None if the iterable is empty.
     """
     if lst:
         return lst[0]
