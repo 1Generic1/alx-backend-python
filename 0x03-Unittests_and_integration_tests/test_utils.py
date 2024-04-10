@@ -9,6 +9,7 @@ from unittest.mock import patch, Mock
 from utils import get_json
 from utils import memoize
 
+
 class TestAccessNestedMap(unittest.TestCase):
     """ test module """
     @parameterized.expand([
@@ -33,6 +34,7 @@ class TestAccessNestedMap(unittest.TestCase):
         """Tests `access_nested_map`'s exception raising."""
         with self.assertRaises(exception):
             access_nested_map(nested_map, path)
+
 
 class TestGetJson(unittest.TestCase):
     """ test module """
@@ -72,6 +74,7 @@ class TestMemoize(unittest.TestCase):
             mocked_method.assert_called_once()
             self.assertEqual(result1, 42)
             self.assertEqual(result2, 42)
+
 
 if __name__ == '__main__':
     unittest.main()
