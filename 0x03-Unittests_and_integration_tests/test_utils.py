@@ -4,7 +4,7 @@
 import unittest
 from parameterized import parameterized
 from utils import access_nested_map
-
+from typing import Dict, Tuple, Union
 
 class TestAccessNestedMap(unittest.TestCase):
     """ test module """
@@ -18,11 +18,6 @@ class TestAccessNestedMap(unittest.TestCase):
         self.assertEqual(access_nested_map(nested_map, path), expected_result)
 
     @parameterized.expand([
-        ({}, ("a",)),
-        ({"a": 1}, ("a", "b"))
-    ])
-
-        @parameterized.expand([
         ({}, ("a",), KeyError),
         ({"a": 1}, ("a", "b"), KeyError),
     ])
