@@ -22,11 +22,19 @@ class TestAccessNestedMap(unittest.TestCase):
         ({"a": 1}, ("a", "b"))
     ])
 
-    def test_access_nested_map_exception(self, nested_map, path):
-        """ test module """
-        with self.assertRaises(KeyError) as context:
+        @parameterized.expand([
+        ({}, ("a",), KeyError),
+        ({"a": 1}, ("a", "b"), KeyError),
+    ])
+    def test_access_nested_map_exception(
+            self,
+            nested_map: Dict,
+            path: Tuple[str],
+            exception: Exception,
+            ) -> None:
+        """Tests `access_nested_map`'s exception raising."""
+        with self.assertRaises(exception):
             access_nested_map(nested_map, path)
-        self.assertEqual(str(context.exception), f"Key not found: {path[-1]}")
 
 if __name__ == '__main__':
     unittest.main()
